@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Calculator</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+
+	<h1>Simple Calculator</h1>
+
+	<script type="text/javascript">
+
+		function calculate() {
+
+			// Get the two numbers from the user
+			var num1 = parseFloat(prompt("Enter the first number:"));
+			var num2 = parseFloat(prompt("Enter the second number:"));
+
+			// Get the operator from the user
+			var operator = prompt("Enter the operator (+, *, -, /):");
+
+			// Calculate the result based on the operator
+			var result;
+			if (operator == "+") {
+				result = num1 + num2;
+			} else if (operator == "-") {
+				result = num1 - num2;
+			} else if (operator == "*") {
+				result = num1 * num2;
+			} else if (operator == "/") {
+				result = num1 / num2;
+			} else {
+				alert("Invalid operator entered.");
+				return;
+			}
+
+			// Display the result to the user
+			alert("The result is: " + result);
+
+		}
+
+		// Call the calculate function
+		calculate();
+
+	</script>
+
+</body>
+</html>
